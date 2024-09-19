@@ -14,38 +14,47 @@
   <body>
     <main>
       <div class="input_container">
+        <div class="signup_section">
+          <span>SignUp</span>
+          <div class="input_column2">
+            <div class="input_box">
+              <input id="signup_id" type="text" placeholder="아이디" />
+            </div>
+            <div class="input_box">
+              <input id="signup_pwd" type="password" placeholder="비밀번호" />
+              <i id="signup_show" class="fa-solid fa-eye"></i>
+            </div>
+            <div class="input_box">
+              <input
+                id="signup_pwdCheck"
+                type="password"
+                placeholder="비밀번호 확인"
+              />
+            </div>
+          </div>
+          <button class="signup_btn">회원가입</button>
+          <span class="login_ment">login</span>
+        </div>
+
         <div class="login_section">
           <span>Login</span>
           <div class="input_column">
             <div class="input_box">
-              <input placeholder="email" />
+              <input id="login_id" type="text" placeholder="ID" />
             </div>
             <div class="input_box">
-              <input placeholder="password" /><i class="fa-regular fa-eye"></i>
+              <input id="login_password" type="password" placeholder="password" /><i id="login_show" class="fa-solid fa-eye"></i>
+              </i>
             </div>
           </div>
           <button class="login_btn">로그인</button>
           <span class="signup_ment">signup</span>
         </div>
-
-        <div class="signup_section">
-          <span>SignUp</span>
-          <div class="input_column2">
-            <div class="input_box">
-              <input placeholder="아이디" />
-            </div>
-            <div class="input_box">
-              <input placeholder="비밀번호" />
-              <i class="fa-regular fa-eye"></i>
-            </div>
-            <div class="input_box">
-              <input placeholder="비밀번호 확인" />
-            </div>
-          </div>
-          <button class="login_btn">회원가입</button>
-          <span class="signup_ment">login</span>
-        </div>
+        <!-- 가리기 위한 오버레이 -->
+        <div class="overlay"></div>
       </div>
     </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>

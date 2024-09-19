@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  background-color: #ffd7c4;
 }
 
 main {
@@ -19,6 +20,7 @@ main {
   height: 50%;
   box-shadow: 0px 3px 5px 2px gray;
   border-radius: 0.5rem;
+  background-color: white;
 }
 .input_column {
   width: 60%;
@@ -65,6 +67,18 @@ span {
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
+.signup_btn {
+  width: 60%;
+  height: 40px;
+  background-color: #ff6600;
+  color: white;
+  font-family: 'GmarketMedium';
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
 input {
   width: 88%;
   padding-left: 0.2rem;
@@ -75,6 +89,12 @@ input {
   background-color: none;
 }
 .signup_ment {
+  color: #257ef9;
+  border-bottom: 1px solid #257ef9;
+  font-family: none;
+  cursor: pointer;
+}
+.login_ment {
   color: #257ef9;
   border-bottom: 1px solid #257ef9;
   font-family: none;
@@ -97,4 +117,17 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 25%;
+  /* left: 54.36%; */
+  width: 422.5px;
+  height: 371px;
+  background-color: rgba(244, 214, 204, 0.8); /* 반투명 흰색 */
+  backdrop-filter: blur(2px);
+  /* border: 1px solid black; */
+  border-radius: 0.3rem;
+  z-index: 2;
 }
