@@ -1,0 +1,83 @@
+@import url('../../assets/fonts/font.css');
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+}
+
+.home_header {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title_container {
+  width: 25vw;
+}
+.title {
+  font-family: 'GmarketBold';
+  cursor: pointer;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 0.5rem;
+}
+
+.home_navlist {
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.nav_row {
+  width: 12vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav_row > span {
+  font-family: 'GmarketLight';
+  font-size: 1.1rem;
+  color: #c1c1c1;
+  font-weight: 550;
+}
+
+.nav_row > span:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.ui_section {
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui_section > i {
+  cursor: pointer;
+}
+
+nav {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 3rem;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 90%;
+  height: 40vh;
+  background-image: url('../../assets/images/campus.jpg');
+  background-size: cover; /* 이미지가 div를 가득 채우도록 */
+  background-position: 25% 75%; /* 이미지 중앙 부분이 나타나도록 */
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  padding: 3px;
+  margin-top: 1rem;
+}
