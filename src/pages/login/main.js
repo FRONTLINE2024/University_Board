@@ -1,3 +1,4 @@
+// 로그인
 document.addEventListener('DOMContentLoaded', function () {
   const loginBtn = document.querySelector('.login_btn');
 
@@ -6,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const idValue = document.getElementById('login_id').value;
       const pwdValue = document.getElementById('login_password').value;
 
-      // const checkUserInfo = localStorage.getItem(idValue);
       const checkUserInfo = JSON.parse(localStorage.getItem(idValue));
 
       if (idValue === checkUserInfo.id && pwdValue === checkUserInfo.password) {
+        document.cookie = `user=${idValue}; path=/`;
         location.href = '/src/pages/home/index.html';
       } else {
         alert('아이디 혹은 비밀번호를 확인해주세요');
@@ -18,6 +19,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// 회원가입
+document.addEventListener('DOMContentLoaded', function () {
+  const signupBtn = document.querySelector('.signup_btn');
+
+  if (signupBtn) {
+    signupBtn.addEventListener('click', function () {
+      const idValue = document.getElementById('signup_id').value;
+      const pwdValue = document.getElementById('signup_pwd').value;
+      const pwdCheckValue = document.getElementById('signup_pwdCheck').value;
+
+      console.log(idValue, pwdValue, pwdCheckValue);
+      const userData = {
+        id: idValue,
+        password: pwdValue,
+      };
+
+      if (pwdValue === pwdCheckValue) {
+        localStorage.setItem(`${idValue}`, JSON.stringify(userData));
+        alert('회원가입 성공!');
+        document.getElementById('signup_id').value = '';
+        document.getElementById('signup_pwd').value = '';
+        document.getElementById('signup_pwdCheck').value = '';
+      } else {
+        alert('비밀번호가 다릅니다! 확인해주세요😭');
+      }
+    });
+  }
+});
+
+// 비밀번호 보이기 (로그인)
 document.addEventListener('DOMContentLoaded', function () {
   const showPwd = document.querySelector('#login_show');
 
@@ -38,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// 비밀번호 보이기 (회원가입)
 document.addEventListener('DOMContentLoaded', function () {
   const showPwd = document.querySelector('#signup_show');
 
@@ -61,31 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const signupBtn = document.querySelector('.signup_btn');
-
-  if (signupBtn) {
-    signupBtn.addEventListener('click', function () {
-      const idValue = document.getElementById('signup_id').value;
-      const pwdValue = document.getElementById('signup_pwd').value;
-      const pwdCheckValue = document.getElementById('signup_pwdCheck').value;
-
-      console.log(idValue, pwdValue, pwdCheckValue);
-      const userData = {
-        id: idValue,
-        password: pwdValue,
-      };
-
-      if (pwdValue === pwdCheckValue) {
-        localStorage.setItem(`${idValue}`, JSON.stringify(userData));
-        alert('회원가입 성공!');
-      } else {
-        alert('비밀번호가 다릅니다! 확인해주세요😭');
-      }
-    });
-  }
-});
-
+// 블러 이동 (로그인)
 document.addEventListener('DOMContentLoaded', function () {
   const signupBtn = document.querySelector('.signup_ment');
   const overlay = document.querySelector('.overlay');
@@ -108,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// 블러 이동 (회원가입)
 document.addEventListener('DOMContentLoaded', function () {
   const signupBtn = document.querySelector('.login_ment');
   const overlay = document.querySelector('.overlay');
